@@ -13,10 +13,10 @@ export const Main = (props: StackProps) => (
     <Section bgColor="gray.200">
       <Heading>Section 1</Heading>
     </Section>
-    <Section bgColor="gray.400">
+    <Section id="projects" bgColor="gray.400">
       <Heading>Section 2</Heading>
     </Section>
-    <Section bgColor="gray.600">
+    <Section id="contact" bgColor="gray.600">
       <Heading>Section 3</Heading>
     </Section>
   </Stack>
