@@ -17,18 +17,18 @@ import {
   Flex,
 } from "@chakra-ui/react";
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
-import LayoutContainer from "../LayoutContainer";
+import MainContainer from "../MainContainer";
 import { GithubIcon, LinkedInIcon } from "../Icons";
 import NavItem from "./NavItem";
 
-const MobileNavBar = () => {
+const MobileNavbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   const CloseBtnRef = React.useRef();
 
   return (
     <Box w="full" p="0" m="0">
-      <LayoutContainer>
+      <MainContainer>
         <Flex justifyContent="space-between" alignItems="center">
           <Link href="/" _hover={{ textDecor: "none" }}>
             <Text as="span" fontSize="xl" fontWeight="semibold">
@@ -132,9 +132,9 @@ const MobileNavBar = () => {
             </DrawerFooter>
           </DrawerContent>
         </Drawer>
-      </LayoutContainer>
+      </MainContainer>
     </Box>
   );
 };
 
-export default MobileNavBar;
+export default MobileNavbar;
