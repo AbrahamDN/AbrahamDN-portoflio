@@ -27,7 +27,16 @@ const MobileNavbar = () => {
   const CloseBtnRef = React.useRef();
 
   return (
-    <Box w="full" p="0" m="0">
+    <Box
+      as="header"
+      w="full"
+      p="0"
+      m="0"
+      position="absolute"
+      bg="whiteAlpha.800"
+      backdropFilter="auto"
+      backdropBlur="sm"
+    >
       <MainContainer>
         <Flex justifyContent="space-between" alignItems="center">
           <Link href="/" _hover={{ textDecor: "none" }}>
