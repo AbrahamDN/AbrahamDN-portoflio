@@ -1,9 +1,8 @@
-import { Flex, Heading, Stack, StackProps } from "@chakra-ui/react";
-import Section from "../Section";
-import MainStyled from "./Main.styled";
+import { Heading, Stack, StackProps } from "@chakra-ui/react";
+import Section from "./Section";
 
 export const Main = (props: StackProps) => (
-  <MainStyled
+  <Stack
     as="main"
     w="full"
     h="100vh"
@@ -20,5 +19,5 @@ export const Main = (props: StackProps) => (
     <Section bgColor="gray.600">
       <Heading>Section 3</Heading>
     </Section>
-  </MainStyled>
+  </Stack>
 );
