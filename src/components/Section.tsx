@@ -1,17 +1,13 @@
-import { Flex, FlexProps } from "@chakra-ui/react";
+import { Container, Flex, Stack, StackProps } from "@chakra-ui/react";
 import React from "react";
 
-const Section = (props: FlexProps) => {
+const Section = ({ children, ...otherProps }: StackProps) => {
   return (
-    <Flex
-      as="section"
-      minH="100vh"
-      direction="column"
-      alignItems="center"
-      justifyContent="center"
-      scrollSnapAlign="start"
-      {...props}
-    />
+    <Stack as="section" minH="100vh" scrollSnapAlign="start" {...otherProps}>
+      <Container maxWidth={{ base: "container.lg", "2xl": "container.xl" }}>
+        {children}
+      </Container>
+    </Stack>
   );
 };
 
