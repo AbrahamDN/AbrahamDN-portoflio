@@ -24,6 +24,7 @@ const Navbar = () => {
 
   return (
     <Box
+      as="header"
       w="full"
       p="0"
       m="0"
