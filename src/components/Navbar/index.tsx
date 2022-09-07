@@ -1,8 +1,6 @@
 import React from "react";
 
 import {
-  useDisclosure,
-  Button,
   Flex,
   Text,
   Link,
@@ -10,14 +8,10 @@ import {
   useBreakpointValue,
   Stack,
 } from "@chakra-ui/react";
-import { CloseIcon, ExternalLinkIcon, HamburgerIcon } from "@chakra-ui/icons";
 import MainContainer from "../MainContainer";
-import { GithubIcon, LinkedInIcon } from "../Icons";
 import MobileNavbar from "./MobileNavbar";
 
 const Navbar = () => {
-  const btnRef = React.useRef();
-
   const isMobile = useBreakpointValue({ base: true, sm: false });
 
   if (isMobile) return <MobileNavbar />;
@@ -32,11 +26,17 @@ const Navbar = () => {
       bg="whiteAlpha.800"
       backdropFilter="auto"
       backdropBlur="sm"
+      zIndex="sticky"
     >
       <MainContainer>
         <Flex justifyContent="space-between" alignItems="center">
           <Link href="/" _hover={{ textDecor: "none" }}>
-            <Text as="span" fontSize="lg" fontWeight="semibold">
+            <Text
+              as="span"
+              fontSize="lg"
+              fontWeight="semibold"
+              userSelect="none"
+            >
               AbrahamDN
             </Text>
           </Link>

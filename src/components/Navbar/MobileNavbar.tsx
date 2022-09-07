@@ -20,6 +20,7 @@ import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 import MainContainer from "../MainContainer";
 import { GithubIcon, LinkedInIcon } from "../Icons";
 import NavItem from "./NavItem";
+import Socials from "../Socials";
 
 const MobileNavbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -36,11 +37,17 @@ const MobileNavbar = () => {
       bg="whiteAlpha.800"
       backdropFilter="auto"
       backdropBlur="sm"
+      zIndex="sticky"
     >
       <MainContainer>
         <Flex justifyContent="space-between" alignItems="center">
           <Link href="/" _hover={{ textDecor: "none" }}>
-            <Text as="span" fontSize="xl" fontWeight="semibold">
+            <Text
+              as="span"
+              fontSize="xl"
+              fontWeight="semibold"
+              userSelect="none"
+            >
               AbrahamDN
             </Text>
           </Link>
@@ -122,22 +129,7 @@ const MobileNavbar = () => {
             </DrawerBody>
 
             <DrawerFooter>
-              <Flex w="full" p="6" justifyContent="center" gap="4">
-                <Tooltip label="Github" color="white">
-                  <Link href="https://github.com/AbrahamDN" isExternal>
-                    <GithubIcon w="6" h="6" />
-                  </Link>
-                </Tooltip>
-
-                <Tooltip label="LinkedIn" color="white">
-                  <Link
-                    href="https://www.linkedin.com/in/abrahamdn/"
-                    isExternal
-                  >
-                    <LinkedInIcon w="6" h="6" />
-                  </Link>
-                </Tooltip>
-              </Flex>
+              <Socials w="full" justifyContent="center" p="6" />
             </DrawerFooter>
           </DrawerContent>
         </Drawer>
