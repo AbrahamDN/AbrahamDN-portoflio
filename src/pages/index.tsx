@@ -12,6 +12,7 @@ import {
 import Navbar from "../components/Navbar";
 import Section from "../components/Section";
 import Socials from "../components/Socials";
+import Image from "next/image";
 
 const Index = () => {
   const isMobile = useBreakpointValue({ base: true, sm: false });
@@ -20,11 +21,14 @@ const Index = () => {
     <Stack h="100vh" scrollSnapType="y mandatory" overflowY="scroll">
       <Navbar />
 
-      <Section id="hero">
+      <Section
+        id="hero"
+        sx={{ ".chakra-container": { pr: { base: "6", sm: 0 } } }}
+      >
         <Flex minH="full" alignItems="center" gap="6">
           <Stack
             // flex="2"
-            maxW={{ base: "full", sm: "40ch", xl: "80ch" }}
+            maxW={{ base: "full", sm: "40ch", xl: "prose" }}
             gap="4"
           >
             <Heading
@@ -62,8 +66,21 @@ const Index = () => {
           </Stack>
 
           {!isMobile && (
-            <AspectRatio flex="1" w="full" ratio={1}>
-              <Flex w="full" h="80" bgColor="gray.600" borderRadius="full" />
+            <AspectRatio
+              flex="1"
+              w="full"
+              ratio={1}
+              display="flex"
+              alignItems="center"
+            >
+              <Image
+                className="w-full h-full object-cover"
+                src="/assets/adn-avatar.svg"
+                alt="abrahamdn portrait"
+                width={533}
+                height={442}
+                // layout="responsive"
+              />
             </AspectRatio>
           )}
         </Flex>
