@@ -22,6 +22,19 @@ const theme = extendTheme({
     },
   },
   components: {
+    Button: {
+      baseStyle: {
+        borderRadius: "full",
+      },
+      variants: {
+        outline: { borderColor: "black" },
+        primary: {
+          fontSize: "xl",
+          border: "1px solid black",
+          px: "10",
+        },
+      },
+    },
     Divider: {
       variants: {
         gradient: {
@@ -32,20 +45,6 @@ const theme = extendTheme({
           borderStyle: "solid",
           borderImageSlice: 1,
           borderTop: "none",
-        },
-      },
-    },
-    Button: {
-      baseStyle: {
-        borderRadius: "full",
-        pt: "6",
-        pb: "7",
-      },
-      variants: {
-        primary: {
-          fontSize: "xl",
-          border: "1px solid black",
-          px: "10",
         },
       },
     },
@@ -64,6 +63,19 @@ const theme = extendTheme({
           _focus: {
             textDecor: "none",
           },
+        },
+      },
+    },
+    Tag: {
+      baseStyle: {
+        container: {
+          bg: "white",
+          bgColor: "white",
+          borderRadius: "full",
+          boxShadow: "inset 0 0 0px 1px black",
+          cursor: "default",
+          fontSize: { base: "xs", sm: "sm", md: "md" },
+          p: "2",
         },
       },
     },
