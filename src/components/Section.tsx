@@ -3,11 +3,13 @@ import React from "react";
 
 const Section = ({ children, ...otherProps }: StackProps) => {
   return (
-    <Stack as="section" minH="100vh" scrollSnapAlign="start" {...otherProps}>
+    <Stack as="section" h="fit-content" scrollSnapAlign="start" {...otherProps}>
       <Container
         maxWidth={{ base: "container.lg", "2xl": "container.xl" }}
-        px="6"
-        py="4"
+        minH="100vh"
+        h="full"
+        py="24"
+        px={{ base: "6", md: "12", lg: "24" }}
       >
         {children}
       </Container>
