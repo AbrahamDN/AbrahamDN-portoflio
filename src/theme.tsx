@@ -17,6 +17,7 @@ const theme = extendTheme({
     global: {
       body: {
         scrollBehavior: "smooth",
+        fontSize: { base: "sm", md: "md" },
       },
     },
   },
@@ -51,12 +52,12 @@ const theme = extendTheme({
     Link: {
       variants: {
         primary: {
+          w: "fit-content",
           fontWeight: "semibold",
           border: "1px solid black",
           borderRadius: "full",
           px: "10",
-          py: "2",
-          pb: "3",
+          py: "3",
           _hover: {
             textDecor: "none",
           },
