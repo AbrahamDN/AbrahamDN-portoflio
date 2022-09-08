@@ -41,7 +41,9 @@ const Card = ({
           ))}
         </Flex>
 
-        <Heading as="h3">{title}</Heading>
+        <Heading as="h3" fontSize={{ base: "xl", md: "3xl" }}>
+          {title}
+        </Heading>
 
         <Text noOfLines={4}>{description}</Text>
 
