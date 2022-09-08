@@ -8,7 +8,7 @@ const Section = ({ children, ...otherProps }: StackProps) => {
         maxWidth={{ base: "container.lg", "2xl": "container.xl" }}
         minH="100vh"
         h="full"
-        py="24"
+        py={{ base: "28", md: "32" }}
         px={{ base: "6", md: "12", lg: "24" }}
       >
         {children}

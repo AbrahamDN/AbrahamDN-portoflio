@@ -1,6 +1,7 @@
 import { DownloadIcon } from "../components/Icons";
 import {
   AspectRatio,
+  Center,
   Divider,
   Flex,
   Heading,
@@ -13,6 +14,9 @@ import Navbar from "../components/Navbar";
 import Section from "../components/Section";
 import Socials from "../components/Socials";
 import Image from "next/image";
+import Card from "../components/Card";
+import { featuredCards } from "../../data/projects";
+import SectionHeading from "../components/SectionHeading";
 
 const Index = () => {
   const isMobile = useBreakpointValue({ base: true, sm: false });
@@ -85,10 +89,26 @@ const Index = () => {
           )}
         </Flex>
       </Section>
-      <Section id="projects" bgColor="gray.400">
-        <Heading>Section 2</Heading>
+
+      <Center>
+        <Divider variant="gradient" maxW="container.xl" />
+      </Center>
+
+      <Section id="projects">
+        <SectionHeading title="Featured projects" />
+
+        <Stack gap={{ base: "24", md: "32" }} mt="28">
+          {featuredCards?.map((card, idx) => (
+            <Card key={`card-${idx}`} {...card} reverse={idx % 2 === 1} />
+          ))}
+        </Stack>
       </Section>
-      <Section id="contact" bgColor="gray.600">
+
+      <Center>
+        <Divider variant="gradient" maxW="container.xl" />
+      </Center>
+
+      <Section id="contact">
         <Heading>Section 3</Heading>
       </Section>
     </Stack>
