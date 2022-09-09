@@ -9,13 +9,17 @@
     "@chakra-ui/icons": "^2.0.2",
     "@chakra-ui/react": "^2.2.1",
     "@chakra-ui/theme-tools": "^2.0.2",
+    "@emailjs/browser": "^3.7.0",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.9.0",
     "@fontsource/poppins": "^4.5.9",
+    "@hookform/resolvers": "^2.9.7",
     "framer-motion": "^6.3.0",
     "next": "latest",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.34.2",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@types/node": "^18.0.0",
