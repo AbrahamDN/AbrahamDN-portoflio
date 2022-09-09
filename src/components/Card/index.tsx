@@ -36,8 +36,10 @@ const Card = ({
     >
       <Stack flex={1} gap="2">
         <Flex mb="2" gap="4" flexWrap="wrap">
-          {tags?.map((tag) => (
-            <Tag size={{ base: "md", md: "lg" }}>{tag.title}</Tag>
+          {tags?.map((tag, idx) => (
+            <Tag key={`tag-${idx}`} size={{ base: "md", md: "lg" }}>
+              {tag.title}
+            </Tag>
           ))}
         </Flex>
 

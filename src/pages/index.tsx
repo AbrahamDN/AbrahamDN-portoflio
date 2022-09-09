@@ -1,6 +1,7 @@
 import { DownloadIcon } from "../components/Icons";
 import {
   AspectRatio,
+  Button,
   Center,
   Divider,
   Flex,
@@ -8,7 +9,9 @@ import {
   Link,
   Stack,
   Text,
+  Tooltip,
   useBreakpointValue,
+  useClipboard,
 } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
 import Section from "../components/Section";
@@ -17,9 +20,12 @@ import Image from "next/image";
 import Card from "../components/Card";
 import { featuredCards } from "../../data/projects";
 import SectionHeading from "../components/SectionHeading";
+import { CheckIcon, CopyIcon } from "@chakra-ui/icons";
+import ContactForm from "../components/ContactForm";
 
 const Index = () => {
   const isMobile = useBreakpointValue({ base: true, sm: false });
+  const { hasCopied, onCopy } = useClipboard("mail@abrahamdn.com");
 
   return (
     <Stack h="100vh" scrollSnapType="y mandatory" overflowY="scroll">
@@ -109,7 +115,34 @@ const Index = () => {
       </Center>
 
       <Section id="contact">
-        <Heading>Section 3</Heading>
+        <SectionHeading title="Get in touch" />
+
+        <Flex
+          mt={["6", "14"]}
+          gap={["6", "14"]}
+          flexDir="column"
+          alignItems="center"
+        >
+          <Tooltip
+            color="white"
+            label={hasCopied ? "Copied email" : "Copy email"}
+            closeOnClick={false}
+          >
+            <Button
+              onClick={onCopy}
+              w="fit-content"
+              p="6"
+              variant="primary"
+              fontSize="sm"
+              fontWeight="normal"
+            >
+              <Text as="span">{"mail@abrahamdn.com"}</Text>
+              {hasCopied ? <CheckIcon ml="2" /> : <CopyIcon ml="2" />}
+            </Button>
+          </Tooltip>
+
+          <ContactForm />
+        </Flex>
       </Section>
     </Stack>
   );
