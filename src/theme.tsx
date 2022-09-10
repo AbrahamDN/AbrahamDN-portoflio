@@ -69,7 +69,6 @@ const theme = extendTheme({
     Tag: {
       baseStyle: {
         container: {
-          bg: "white",
           bgColor: "white",
           borderRadius: "full",
           boxShadow: "inset 0 0 0px 1px black",
@@ -77,6 +76,10 @@ const theme = extendTheme({
           fontSize: { base: "xs", sm: "sm", md: "md" },
           p: "2",
         },
+      },
+      defaultProps: {
+        variant: "outline",
+        colorScheme: "blackOnly",
       },
     },
   },
@@ -101,6 +104,18 @@ const theme = extendTheme({
   },
   colors: {
     black: "#16161D",
+    blackOnly: {
+      50: "#16161D",
+      100: "#16161D",
+      200: "#16161D",
+      300: "#16161D",
+      400: "#16161D",
+      500: "#16161D",
+      600: "#16161D",
+      700: "#16161D",
+      800: "#16161D",
+      900: "#16161D",
+    },
   },
   fonts,
   breakpoints,
