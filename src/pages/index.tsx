@@ -36,7 +36,6 @@ const scrollbarStyles = {
     border: "4px solid white",
     borderRadius: "full",
     bgColor: "black",
-    zIndex: 99999,
   },
 };
 
@@ -49,6 +48,7 @@ const Index = () => {
       h="100vh"
       scrollSnapType="y mandatory"
       overflowY="scroll"
+      position="relative"
       sx={scrollbarStyles}
     >
       <Head>
