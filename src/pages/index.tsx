@@ -25,12 +25,32 @@ import ContactForm from "../components/ContactForm";
 import Head from "next/head";
 import Footer from "../components/Footer";
 
+const scrollbarStyles = {
+  "&::-webkit-scrollbar": {
+    w: "3.5",
+  },
+  "&::-webkit-scrollbar-track": {
+    bgColor: "transparent",
+  },
+  "&::-webkit-scrollbar-thumb": {
+    border: "4px solid white",
+    borderRadius: "full",
+    bgColor: "black",
+    zIndex: 99999,
+  },
+};
+
 const Index = () => {
   const isMobile = useBreakpointValue({ base: true, sm: false });
   const { hasCopied, onCopy } = useClipboard("mail@abrahamdn.com");
 
   return (
-    <Stack h="100vh" scrollSnapType="y mandatory" overflowY="scroll">
+    <Stack
+      h="100vh"
+      scrollSnapType="y mandatory"
+      overflowY="scroll"
+      sx={scrollbarStyles}
+    >
       <Head>
         <title>Abraham DN Portfolio</title>
         <link rel="icon" href="/adn.svg" />
