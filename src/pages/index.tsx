@@ -41,6 +41,14 @@ const Index = () => {
 
       <Navbar />
 
+      <Divider
+        h="100vh"
+        orientation="vertical"
+        variant="gradient"
+        position="fixed"
+        left="24"
+      />
+
       <Section
         id="hero"
         sx={{ ".chakra-container": { pr: { base: "6", sm: 0 } } }}

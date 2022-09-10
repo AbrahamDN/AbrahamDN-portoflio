@@ -40,7 +40,7 @@ const theme = extendTheme({
         gradient: {
           border: "1px solid",
           borderImage:
-            "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%)",
+            "radial-gradient(circle, rgba(0,0,0, 0.25) 0%, rgba(255,255,255,0) 100%)",
           borderWidth: "2px",
           borderStyle: "solid",
           borderImageSlice: 1,
