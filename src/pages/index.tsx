@@ -23,6 +23,7 @@ import SectionHeading from "../components/SectionHeading";
 import { CheckIcon, CopyIcon } from "@chakra-ui/icons";
 import ContactForm from "../components/ContactForm";
 import Head from "next/head";
+import Footer from "../components/Footer";
 
 const Index = () => {
   const isMobile = useBreakpointValue({ base: true, sm: false });
@@ -42,12 +43,14 @@ const Index = () => {
       <Navbar />
 
       <Divider
-        h="100vh"
+        h="90vh"
         orientation="vertical"
         variant="gradient"
+        display={{ base: "none", xl: "block" }}
         position="fixed"
         left="24"
-        display={{ base: "none", xl: "block" }}
+        top="50%"
+        transform="translateY(-50%)"
       />
 
       <Section
@@ -167,6 +170,12 @@ const Index = () => {
           <ContactForm />
         </Flex>
       </Section>
+
+      <Center>
+        <Divider variant="gradient" maxW="container.xl" />
+      </Center>
+
+      <Footer />
     </Stack>
   );
 };
