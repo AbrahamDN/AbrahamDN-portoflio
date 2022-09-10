@@ -44,7 +44,7 @@ const Index = () => {
             <Heading
               as="h1"
               textStyle="h1"
-              fontSize={{ base: "4xl", xl: "56px" }}
+              fontSize={{ base: "2xl", md: "4xl", xl: "56px" }}
               textTransform="uppercase"
             >
               Abraham D Ndinga

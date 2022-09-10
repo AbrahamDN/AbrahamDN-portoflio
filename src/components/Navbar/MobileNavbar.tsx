@@ -44,7 +44,7 @@ const MobileNavbar = () => {
           <Link href="/" _hover={{ textDecor: "none" }}>
             <Text
               as="span"
-              fontSize="xl"
+              fontSize="md"
               fontWeight="semibold"
               userSelect="none"
             >

@@ -3,11 +3,11 @@ import React from "react";
 
 const SectionHeading = (props: HeadingProps & { title: string }) => {
   return (
-    <Heading flex={1} display="flex" alignItems="center" gap="8" {...props}>
+    <Heading display="flex" alignItems="center" gap="8" {...props}>
       <Text as="span" fontSize={{ base: "2xl", md: "4xl" }}>
         {props.title}
       </Text>
-      <Divider variant="gradient" w="30%" />
+      <Divider flex={[1, "initial"]} variant="gradient" w="30%" />
     </Heading>
   );
 };
