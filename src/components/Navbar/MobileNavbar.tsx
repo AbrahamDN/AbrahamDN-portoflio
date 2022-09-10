@@ -117,14 +117,16 @@ const MobileNavbar = () => {
                   noDivider
                 />
 
-                <Link
-                  href="#contact"
-                  variant="primary"
-                  mt="4"
-                  onClick={onClose}
-                >
-                  Get In Touch
-                </Link>
+                <Stack as="li">
+                  <Link
+                    href="#contact"
+                    variant="primary"
+                    mt="4"
+                    onClick={onClose}
+                  >
+                    Get In Touch
+                  </Link>
+                </Stack>
               </Flex>
             </DrawerBody>
 

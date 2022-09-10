@@ -58,10 +58,11 @@ const Navbar = () => {
                   <Text as="span">Projects</Text>
                 </Link>
               </Stack>
-
-              <Link href="#contact" variant="primary" px="8">
-                Get In Touch
-              </Link>
+              <Stack as="li">
+                <Link href="#contact" variant="primary" px="8">
+                  Get In Touch
+                </Link>
+              </Stack>
             </Flex>
           </Box>
         </Flex>
