@@ -18,7 +18,7 @@ function NavItem({ onClick, noDivider, href, text }: NavItemProps) {
         _focus={{ textDecor: "none" }}
         onClick={onClick}
       >
-        <Text as="span" fontSize="2xl" fontWeight="semibold">
+        <Text as="span" fontSize="lg" fontWeight="semibold">
           {text}
         </Text>
       </Link>

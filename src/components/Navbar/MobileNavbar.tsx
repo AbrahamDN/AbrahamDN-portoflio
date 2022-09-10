@@ -94,7 +94,7 @@ const MobileNavbar = () => {
               </Button>
 
               <Link href="/" _hover={{ textDecor: "none" }}>
-                <Text>AbrahamDN</Text>
+                <Text fontSize="md">AbrahamDN</Text>
               </Link>
             </DrawerHeader>
 
@@ -124,7 +124,9 @@ const MobileNavbar = () => {
                     mt="4"
                     onClick={onClose}
                   >
-                    Get In Touch
+                    <Text as="span" fontSize="lg" fontWeight="semibold">
+                      Get In Touch
+                    </Text>
                   </Link>
                 </Stack>
               </Flex>

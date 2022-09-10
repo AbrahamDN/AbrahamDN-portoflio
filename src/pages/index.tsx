@@ -47,6 +47,7 @@ const Index = () => {
         variant="gradient"
         position="fixed"
         left="24"
+        display={{ base: "none", xl: "block" }}
       />
 
       <Section
@@ -69,14 +70,18 @@ const Index = () => {
             </Heading>
 
             <Text maxW="prose">
-              I'm an experienced front-end developer with about 3 years of
-              experience, passionate about accessibility, performance and user
-              experience. My key skills consist of JavaScript, React, Styled
-              Components, Storybook & Redux all whilst utilising GitLab's CI/CD
-              pipelines.
+              Experienced front-end developer with about 3 years of experience,
+              passionate about accessibility, performance and user experience.
+              My key skills consist of JavaScript, React, Styled Components,
+              Storybook & Redux all whilst utilising GitLab's CI/CD pipelines.
             </Text>
 
-            <Link variant="primary">
+            <Link
+              variant="primary"
+              href="/assets/abrahamdn-cv.pdf"
+              target="_blank"
+              rel="noopener"
+            >
               <Text as="span">Download CV</Text>
               <DownloadIcon w="5" h="5" ml="0.5" />
             </Link>
