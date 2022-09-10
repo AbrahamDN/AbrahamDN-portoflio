@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { useIntersectionObserver } from "usehooks-ts";
+import { motion } from "framer-motion";
 import {
   AspectRatio,
-  Button,
   Flex,
   Heading,
+  keyframes,
   Link,
   LinkOverlay,
   Stack,
@@ -11,6 +13,7 @@ import {
   Text,
   useBreakpointValue,
 } from "@chakra-ui/react";
+
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { GithubIcon } from "../Icons";
 import Image from "next/image";
@@ -25,10 +28,33 @@ const Card = ({
   repoLink,
   reverse,
 }: CardProps) => {
+  const [isVisible, setIsVisible] = useState(false);
+
   const isMobile = useBreakpointValue({ base: true, sm: false });
+
+  const ref = useRef<HTMLDivElement | null>(null);
+  const entry = useIntersectionObserver(ref, {
+    threshold: 0.3,
+  });
+  const isIntersecting = !!entry?.isIntersecting;
+
+  const slideUp = keyframes`
+    0% { transform: translateY(100%); opacity: 0; }
+    25% { opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  `;
+  const animation = `${slideUp} 600ms ease-in`;
+
+  useEffect(() => {
+    if (isIntersecting) setIsVisible(true);
+  }, [isIntersecting]);
+
   return (
     <Flex
-      as="article"
+      as={motion.article}
+      ref={ref}
+      animation={isVisible && animation}
+      visibility={isVisible ? "visible" : "hidden"}
       gap="8"
       alignItems="center"
       flexDirection={
@@ -69,13 +95,15 @@ const Card = ({
 
       <AspectRatio flex={1} w="full" ratio={isMobile ? 21 / 9 : 4 / 3}>
         <LinkOverlay href={previewLink} isExternal>
-          <Image
-            src={image}
-            alt="Preview"
-            width={1097}
-            height={823}
-            layout="intrinsic"
-          />
+          {isVisible && (
+            <Image
+              src={image}
+              alt="Preview"
+              width={1097}
+              height={823}
+              layout="intrinsic"
+            />
+          )}
         </LinkOverlay>
       </AspectRatio>
     </Flex>
