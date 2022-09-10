@@ -28,6 +28,7 @@ const Card = ({
   const isMobile = useBreakpointValue({ base: true, sm: false });
   return (
     <Flex
+      as="article"
       gap="8"
       alignItems="center"
       flexDirection={
