@@ -22,6 +22,7 @@ import { featuredCards } from "../../data/projects";
 import SectionHeading from "../components/SectionHeading";
 import { CheckIcon, CopyIcon } from "@chakra-ui/icons";
 import ContactForm from "../components/ContactForm";
+import Head from "next/head";
 
 const Index = () => {
   const isMobile = useBreakpointValue({ base: true, sm: false });
@@ -29,6 +30,15 @@ const Index = () => {
 
   return (
     <Stack h="100vh" scrollSnapType="y mandatory" overflowY="scroll">
+      <Head>
+        <title>Abraham DN Portfolio</title>
+        <link rel="icon" href="/adn.svg" />
+        <meta
+          name="description"
+          content="Abraham D Ndinga - web developer portfolio."
+        />
+      </Head>
+
       <Navbar />
 
       <Section
