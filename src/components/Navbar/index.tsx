@@ -44,11 +44,11 @@ const Navbar = () => {
 
           <Box as="nav">
             <Flex as="ul" alignItems="center" gap="6">
-              <Stack as="li">
+              {/* <Stack as="li">
                 <Link href="/">
                   <Text as="span">Home</Text>
                 </Link>
-              </Stack>
+              </Stack> */}
               <Stack as="li">
                 <Link href="#skills">
                   <Text as="span">Skills</Text>
