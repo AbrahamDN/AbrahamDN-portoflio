@@ -94,7 +94,7 @@ const Card = ({
       </Stack>
 
       <AspectRatio flex={1} w="full" ratio={isMobile ? 21 / 9 : 4 / 3}>
-        <LinkOverlay href={previewLink} isExternal>
+        <LinkOverlay href={previewLink} isExternal aria-label={title}>
           {isVisible && (
             <Image
               src={image}
