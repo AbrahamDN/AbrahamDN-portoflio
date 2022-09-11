@@ -34,16 +34,17 @@ const Card = ({
 
   const ref = useRef<HTMLDivElement | null>(null);
   const entry = useIntersectionObserver(ref, {
-    threshold: 0.3,
+    root: null,
+    rootMargin: "40%",
+    threshold: 1,
   });
   const isIntersecting = !!entry?.isIntersecting;
 
-  const slideUp = keyframes`
-    0% { transform: translateY(100%); opacity: 0; }
-    25% { opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
+  const fadeIn = keyframes`
+    0% {  opacity: 0; }
+    100% { opacity: 1; }
   `;
-  const animation = `${slideUp} 600ms ease-in`;
+  const animation = `${fadeIn} 600ms ease-in`;
 
   useEffect(() => {
     if (isIntersecting) setIsVisible(true);
