@@ -130,7 +130,11 @@ const Index = () => {
       <Section id="projects">
         <SectionHeading>Featured projects</SectionHeading>
 
-        <Stack gap={{ base: "24", md: "32" }} mt="28">
+        <Stack
+          gap={{ base: "24", md: "32" }}
+          mt="28"
+          scrollSnapType="y mandatory"
+        >
           {featuredCards?.map((card, idx) => (
             <Card key={`card-${idx}`} {...card} reverse={idx % 2 === 1} />
           ))}

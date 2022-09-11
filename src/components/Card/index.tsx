@@ -60,6 +60,7 @@ const Card = ({
       flexDirection={
         isMobile ? "column-reverse" : reverse ? "row-reverse" : "row"
       }
+      scrollSnapAlign="center"
     >
       <Stack flex={1} gap="2">
         <Flex mb="2" gap="4" flexWrap="wrap">
