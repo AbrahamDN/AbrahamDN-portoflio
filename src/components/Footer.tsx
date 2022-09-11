@@ -18,7 +18,7 @@ const Footer = (props: FlexProps) => (
     p="0"
     m="0"
     h="fit-content"
-    scrollSnapAlign="end"
+    scrollSnapAlign="center"
     fontSize={{ base: "xs", md: "sm" }}
   >
     <MainContainer>

@@ -1,21 +1,15 @@
-import React, { useRef } from "react";
-import { useIntersectionObserver } from "usehooks-ts";
+import React from "react";
 import { Container, Stack, StackProps } from "@chakra-ui/react";
 
 const Section = ({ children, ...otherProps }: StackProps) => {
-  const ref = useRef<HTMLDivElement | null>(null);
-  const entry = useIntersectionObserver(ref, {});
-  const hasPastVisibility = entry?.boundingClientRect?.y < 0;
-
   return (
     <Stack
       as="section"
       h="fit-content"
-      scrollSnapAlign={hasPastVisibility ? "end" : "start"}
+      scrollSnapAlign={"start"}
       {...otherProps}
     >
       <Container
-        ref={ref}
         maxWidth={{ base: "container.lg", "2xl": "container.xl" }}
         minH="100vh"
         h="full"
