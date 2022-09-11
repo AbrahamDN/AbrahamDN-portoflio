@@ -3,8 +3,8 @@ import { useIntersectionObserver } from "usehooks-ts";
 import { motion } from "framer-motion";
 import {
   AspectRatio,
+  Box,
   Flex,
-  Heading,
   keyframes,
   Link,
   LinkOverlay,
@@ -70,9 +70,9 @@ const Card = ({
           ))}
         </Flex>
 
-        <Heading as="h3" fontSize={{ base: "xl", md: "3xl" }}>
+        <Box as="h3" textStyle="h3">
           {title}
-        </Heading>
+        </Box>
 
         <Text noOfLines={4}>{description}</Text>
 

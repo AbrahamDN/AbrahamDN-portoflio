@@ -34,7 +34,7 @@ const Navbar = () => {
           <Link href="/" _hover={{ textDecor: "none" }}>
             <Text
               as="span"
-              fontSize="lg"
+              textStyle="h5"
               fontWeight="semibold"
               userSelect="none"
             >

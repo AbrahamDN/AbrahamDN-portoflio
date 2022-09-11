@@ -12,6 +12,53 @@ const breakpoints = {
   xl: "80em",
 };
 
+const fontSizes = {
+  xs: "0.75em",
+  sm: "0.875em",
+  md: "1em",
+  lg: "1.25em",
+  xl: "1.5em",
+  "2xl": "1.75em",
+  "3xl": "2em",
+  "4xl": "2.25em",
+  "5xl": "2.5em",
+  "6xl": "3.5em",
+  "7xl": "4.5rem",
+  "8xl": "6rem",
+  "9xl": "8rem",
+};
+
+const textStyles = {
+  h1: {
+    fontSize: { base: "2xl", md: "4xl", xl: "6xl" },
+    fontWeight: "semibold",
+  },
+  h2: {
+    fontSize: { base: "xl", md: "4xl", xl: "5xl" },
+    fontWeight: "semibold",
+  },
+  h3: {
+    fontSize: { base: "lg", md: "xl", xl: "3xl" },
+    fontWeight: "semibold",
+  },
+  h4: {
+    fontSize: { base: "md", md: "xl" },
+    fontWeight: "semibold",
+  },
+  h5: {
+    fontSize: { base: "md", md: "lg" },
+    fontWeight: "semibold",
+  },
+  h6: {
+    fontSize: { base: "sm", md: "md" },
+    fontWeight: "semibold",
+  },
+  p: {
+    fontSize: { base: "sm", md: "md" },
+    fontWeight: "semibold",
+  },
+};
+
 const theme = extendTheme({
   styles: {
     global: {
@@ -99,7 +146,7 @@ const theme = extendTheme({
       },
     },
     radii: {
-      button: "12px",
+      button: "xs",
     },
   },
   colors: {
@@ -118,7 +165,9 @@ const theme = extendTheme({
     },
   },
   fonts,
+  fontSizes,
   breakpoints,
+  textStyles,
 });
 
 export default theme;

@@ -45,7 +45,7 @@ const MobileNavbar = () => {
           <Link href="/" _hover={{ textDecor: "none" }}>
             <Text
               as="span"
-              fontSize="md"
+              textStyle="h5"
               fontWeight="semibold"
               userSelect="none"
             >
@@ -95,7 +95,7 @@ const MobileNavbar = () => {
               </Button>
 
               <Link href="/" _hover={{ textDecor: "none" }}>
-                <Text fontSize="md">AbrahamDN</Text>
+                <Text textStyle="h5">AbrahamDN</Text>
               </Link>
             </DrawerHeader>
 
