@@ -1,13 +1,16 @@
 import { DownloadIcon } from "../components/Icons";
 import {
   AspectRatio,
+  Box,
   Button,
   Center,
   Divider,
   Flex,
+  Grid,
   Heading,
   Link,
   Stack,
+  Tag,
   Text,
   Tooltip,
   useBreakpointValue,
@@ -83,14 +86,9 @@ const Index = () => {
             maxW={{ base: "full", sm: "40ch", xl: "prose" }}
             gap="4"
           >
-            <Heading
-              as="h1"
-              textStyle="h1"
-              fontSize={{ base: "2xl", md: "4xl", xl: "56px" }}
-              textTransform="uppercase"
-            >
+            <Box as="h1" textStyle="h1" textTransform="uppercase">
               Abraham D Ndinga
-            </Heading>
+            </Box>
 
             <Text maxW="prose">
               Experienced front-end developer with about 3 years of experience,
@@ -146,8 +144,60 @@ const Index = () => {
         <Divider variant="gradient" maxW="container.xl" />
       </Center>
 
+      <Section id="skills">
+        <Stack h="full" justifyContent="center" gap={["8", "8", "20"]}>
+          <SectionHeading>Tech Stack</SectionHeading>
+
+          <Grid
+            templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
+            columnGap="20"
+            rowGap="8"
+          >
+            <Stack gap="2">
+              <Box as="h3" textStyle="h3">
+                Frontend
+              </Box>
+              <Flex flexWrap="wrap" gap="2">
+                <Tag variant="outline">ReactJS</Tag>
+                <Tag variant="outline">NextJS</Tag>
+                <Tag variant="outline">SCSS</Tag>
+                <Tag variant="outline">Redux</Tag>
+                <Tag variant="outline">Javascript</Tag>
+                <Tag variant="outline">Typescript</Tag>
+              </Flex>
+            </Stack>
+
+            <Stack gap="2">
+              <Box as="h3" textStyle="h3">
+                Backend
+              </Box>
+              <Flex flexWrap="wrap" gap="2">
+                <Tag variant="outline">Contentful</Tag>
+                <Tag variant="outline">MongoDB</Tag>
+                <Tag variant="outline">Firebase</Tag>
+                <Tag variant="outline">NodeJS</Tag>
+              </Flex>
+            </Stack>
+
+            <Stack gap="2">
+              <Box as="h3" textStyle="h3" minW="max-content">
+                Design/ Others
+              </Box>
+              <Flex flexWrap="wrap" gap="2">
+                <Tag variant="outline">Figma</Tag>
+                <Tag variant="outline">Jira</Tag>
+              </Flex>
+            </Stack>
+          </Grid>
+        </Stack>
+      </Section>
+
+      <Center>
+        <Divider variant="gradient" maxW="container.xl" />
+      </Center>
+
       <Section id="projects">
-        <SectionHeading title="Featured projects" />
+        <SectionHeading>Featured projects</SectionHeading>
 
         <Stack gap={{ base: "24", md: "32" }} mt="28">
           {featuredCards?.map((card, idx) => (
@@ -161,7 +211,7 @@ const Index = () => {
       </Center>
 
       <Section id="contact">
-        <SectionHeading title="Get in touch" />
+        <SectionHeading>Get in touch</SectionHeading>
 
         <Flex
           mt={["6", "14"]}
