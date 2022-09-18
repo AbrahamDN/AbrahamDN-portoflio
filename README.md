@@ -4,4 +4,4 @@
 
 Personal portfolio built with NextJS & Chakra UI.
 
-![Live preview](https://www.abrahamdn.com/)
+[Live preview](https://www.abrahamdn.com/)
