@@ -81,5 +81,5 @@ export const Hero = (props: StackProps) => {
 };
 
 Hero.defaultProps = {
-  title: "with-chakra-ui-typescript",
+  title: "Abraham DN",
 };
