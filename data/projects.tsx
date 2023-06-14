@@ -1,5 +1,46 @@
 export const featuredCards = [
   {
+    mobileImage:"",
+    image:
+      "https://res.cloudinary.com/abrahamdn/image/upload/v1686716728/abrahamdn/flair-desktop.png",
+    tags: [{ title: "Typescript" }, { title: "NextJS 13" }, { title: "Stripe" }, { title: "TailwindCSS" }, { title: "Sanity CMS" }],
+    title: "Flair",
+    description:
+      "E-commerce accessory shop,built with the latest ReactJS framework, and managed with a cutting-edge CMS - Sanity. Checkout with Stripe.",
+    previewLink: "https://flair.abrahamdn.com",
+    repoLink: "https://github.com/AbrahamDN/flair-ecom",
+  },
+  {
+    mobileImage: "",
+    image:
+      "https://res.cloudinary.com/abrahamdn/image/upload/v1686716729/abrahamdn/travel-desktop.png",
+    tags: [{ title: "JavaScript" }, { title: "CSS" }, { title: "HTML5" }],
+    title: "Travel",
+    description:
+      "Stunning Travel agency site with smooth scrolling & animations. Built with no framework(s) to demonstrate expertise in vanilla code.",
+    previewLink: "https://travel.abrahamdn.com",
+    repoLink: "https://github.com/AbrahamDN/travel",
+  },
+  {
+    mobileImage:"",
+    image:
+      "https://res.cloudinary.com/abrahamdn/image/upload/v1686718907/abrahamdn/pokedets-desktop.png",
+    tags: [
+      { title: "React" },
+      { title: "Typescript" },
+      { title: "Framer Motion" },
+      { title: "Poke API" },
+    ],
+    title: "PokeDets",
+    description: "Custom Pokedex, search & view Pokemon in this Static + Server side application.",
+    previewLink: "http://pokedets.abrahamdn.com/",
+    repoLink: "https://github.com/AbrahamDN/pokedets",
+  },
+];
+
+/*
+export const featuredCards = [
+  {
     mobileImage:
       "https://res.cloudinary.com/abrahamdn/image/upload/v1661209824/abrahamdn/telimine-mobile_xcfyic.png",
     image:
@@ -40,3 +81,4 @@ export const featuredCards = [
     repoLink: "https://github.com/AbrahamDN/crown-clothing",
   },
 ];
+*/
