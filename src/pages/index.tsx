@@ -167,7 +167,7 @@ const Index = () => {
               fontSize="sm"
               fontWeight="normal"
             >
-              <Text as="span">{"mail@abrahamdn.com"}</Text>
+              <Text as="span">{"abrahamdndinga@gmail.com"}</Text>
               {hasCopied ? <CheckIcon ml="2" /> : <CopyIcon ml="2" />}
             </Button>
           </Tooltip>
