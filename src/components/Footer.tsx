@@ -41,7 +41,7 @@ const Footer = (props: FlexProps) => (
 
         <Link
           variant="primary"
-          href="/assets/abrahamdn-cv.pdf"
+          href="/assets/abrahamdn-cv-2.pdf"
           target="_blank"
           rel="noopener"
         >
