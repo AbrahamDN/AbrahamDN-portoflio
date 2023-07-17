@@ -52,7 +52,7 @@ const Index = () => {
         <link rel="icon" href="/adn.svg" />
         <meta
           name="description"
-          content="Abraham D Ndinga - web developer portfolio."
+          content="Abraham Dieudonne Ndinga - web developer portfolio."
         />
       </Head>
 
