@@ -13,6 +13,7 @@ import Image from "next/image";
 import { DownloadIcon } from "./Icons";
 import Section from "./Section";
 import Socials from "./Socials";
+import { content } from "../../data/content";
 
 export const Hero = (props: StackProps) => {
   const isMobile = useBreakpointValue({ base: true, sm: false });
@@ -33,16 +34,11 @@ export const Hero = (props: StackProps) => {
             Abraham D Ndinga
           </Box>
 
-          <Text maxW="prose">
-            Experienced front-end developer with about 3 years of experience,
-            passionate about accessibility, performance and user experience. My
-            key skills consist of JavaScript, React, Styled Components,
-            Storybook & Redux all whilst utilising GitLab's CI/CD pipelines.
-          </Text>
+          <Text maxW="prose">{content.hero_desc}</Text>
 
           <Link
             variant="primary"
-            href="/assets/abrahamdn-cv.pdf"
+            href={content.cv}
             target="_blank"
             rel="noopener"
           >

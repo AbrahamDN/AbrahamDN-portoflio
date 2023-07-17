@@ -1,15 +1,7 @@
-import {
-  Box,
-  Center,
-  Container,
-  Flex,
-  FlexProps,
-  HStack,
-  Link,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Flex, FlexProps, HStack, Link, Text } from "@chakra-ui/react";
 import { DownloadIcon } from "./Icons";
 import MainContainer from "./MainContainer";
+import { content } from "../../data/content";
 
 const Footer = (props: FlexProps) => (
   <Box
@@ -31,17 +23,17 @@ const Footer = (props: FlexProps) => (
         {...props}
       >
         <HStack gap="2">
-          <Link href="https://github.com/AbrahamDN" isExternal>
+          <Link href={content.github} isExternal>
             Github
           </Link>
-          <Link href="https://www.linkedin.com/in/abrahamdn/" isExternal>
+          <Link href={content.linkedIn} isExternal>
             LinkedIn
           </Link>
         </HStack>
 
         <Link
           variant="primary"
-          href="/assets/abrahamdn-cv.pdf"
+          href={content.cv}
           target="_blank"
           rel="noopener"
         >
@@ -49,7 +41,7 @@ const Footer = (props: FlexProps) => (
           <DownloadIcon w="5" h="5" ml="0.5" />
         </Link>
 
-        <Text as="span">&copy; 2022 - AbrahamDN</Text>
+        <Text as="span">{content.copyright}</Text>
       </Flex>
     </MainContainer>
   </Box>
